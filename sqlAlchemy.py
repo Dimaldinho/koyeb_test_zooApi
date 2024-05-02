@@ -1,9 +1,19 @@
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
+import json
+
+def load_config(filename):
+    with open(filename, 'r') as f:
+        config = json.load(f)
+    return config
+
+
+config = load_config('config.json')
+dbFile = config["dbname"]
 
 
 # Change the connection string to point to a SQLite file in the 'db' folder
-engine = create_engine('sqlite:///zoo.db', echo=True)
+engine = create_engine(dbFile, echo=True)
 
 # Declare a base class for declarative class definitions
 Base = declarative_base()
