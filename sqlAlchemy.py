@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+
 
 # Change the connection string to point to a SQLite file in the 'db' folder
 engine = create_engine('sqlite:///zoo.db', echo=True)
