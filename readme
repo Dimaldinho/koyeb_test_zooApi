@@ -1,0 +1,10 @@
+My first api on koyeb
+
+This API has an inner database, which contains animals' names and ages.
+
+Calling the API, you can:
+    "Retrieve all data in the database."
+    "Retrieve data by ID."
+    "Create new data."
+    "Update data by ID."
+    "Delete data by ID."
